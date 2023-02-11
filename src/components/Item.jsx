@@ -1,22 +1,23 @@
 import React from 'react'
+import articulo from "../assets/guantes.jpg"
 
-const Item = () => {
+const Item = ({id, nombre, descripcion, categoria, precio}) => {
+
     return (
         <>
-            <main className='container__cards'>
+            <div className='container__cards'>
                 <section className='card'>
                     <div className='cover__card'>
-                        <img src="../src/assets/guantes.jpg" alt="GUANTES" />
+                        <img src={articulo} alt="GUANTES" />
                     </div>
-                    <h4>Guantes de Boxeo</h4>
-                    <p>Sit enim voluptate quaerat consequatur soluta.
-                        Provident nemo  ducimus totam.</p>
+                    <h4>{nombre}</h4>
+                    <p>{descripcion}</p>
                     <hr />
                     <div className='footer__Card'>
-                        <h4 className='precio'>$150.000</h4>
+                        <h4 className='precio'>{precio}</h4>
                     </div>
                 </section>
-            </main>
+            </div>
         </>
     )
 }

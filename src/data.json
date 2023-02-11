@@ -1,20 +1,24 @@
 [
-    {
+    {       
         "id": "Item 1",
-        "name": "Guantes",
-        "stock": 15,
-        "category": "Implementos Deportivos"
+        "nombre": "GUANTES DE BOXEO",
+        "descripcion": "Sit enim voluptate quaerat consequatur soluta.Provident nemo  ducimus totam",
+        "catergoria": "Implementos Deportivos",
+        "precio": 150000
     },
-    {
+    {   
         "id": "Item 2",
-        "name": "Saco de Boxeo",
-        "stock": 22,
-        "category": "Implementos Deportivos"
+        "nombre": "SACO DE ARTES MARCIALES",
+        "descripcion": "Sit enim voluptate quaerat consequatur soluta.Provident nemo  ducimus totam",
+        "catergoria": "Implementos Deportivos",
+        "precio": 230000
+
     },
-    {
-        "id": "Item 3",
-        "name": "Cinturón",
-        "stock": 9,
-        "category": "Implementos Deportivos"
+    {     
+        "id": "Item 3",   
+        "nombre": "CINTURONES",
+        "descripcion": "Sit enim voluptate quaerat consequatur soluta.Provident nemo  ducimus totam",
+        "catergoria": "Implementos Deportivos",
+        "precio": 45000
     }
 ]

@@ -107,9 +107,9 @@ h4{
 .container__cards{
   width: 100%;
   margin: auto;
-  display: flex;
+  display: flex; 
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
   margin-top: 2em;
 }
 
