@@ -1,14 +1,12 @@
 import React from 'react'
 import Item from './Item'
 
-
-const ItemList = ({ data }) => {
-  console.log(data);
-
+const ItemList = ({ articulos }) => {
+  
   return (
     <>
       <main className='main-catalogue'>
-        {data.map((articulo) => (
+        {articulos.map((articulo) => (
           <Item 
             key={articulo.id}
             id={articulo.id}
@@ -16,6 +14,7 @@ const ItemList = ({ data }) => {
             descripcion={articulo.descripcion}
             categoria={articulo.categoria}
             precio={articulo.precio}
+            stock={articulo.stock}            
           />
         ))}
 

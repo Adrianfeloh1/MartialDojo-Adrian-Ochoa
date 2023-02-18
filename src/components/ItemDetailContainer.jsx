@@ -1,7 +1,11 @@
+import ItemDetail from './ItemDetail';
 import React, { useState } from 'react'
+import { useParams } from 'react-router-dom';
+import data from '../data.json';
+
 
 const ItemDetailContainer = () => {
-
+    const {id} = useParams ();
     const [articulos, setArticulos] = useState([]);
     const getDatos = () => {
         return new Promise((resolve, reject) => {
@@ -27,9 +31,9 @@ const ItemDetailContainer = () => {
 
     fetchingData();
 
-  return (
-    <div>ItemDetailContainer</div>
-  )
+  return <ItemDetail articulos = {data}/>
+
+
 }
 
 export default ItemDetailContainer;

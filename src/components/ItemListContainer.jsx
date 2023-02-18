@@ -1,9 +1,12 @@
-import React from 'react'
 import ItemList from './ItemList';
-import data from "../data.json"
+import data from "../data.json";
+import { useParams } from 'react-router-dom';
 
 const ItemListContainer = ({ gretting }) => {
     //console.log(data)) verifico que traiga el json
+
+    const {category} = useParams();
+
     const getDatos = () => {
         return new Promise((resolve, reject) => {
             if (data.length === 0) {
@@ -17,18 +20,18 @@ const ItemListContainer = ({ gretting }) => {
 
     async function fetchingData() {
         try {
-            const datosFetched = await getDatos();
-            console.log(datosFetched)
+            const datosFetched = await getDatos();            
         } catch (err) {
             console.log(err);            
         }
     }
     fetchingData();    
 
+    const categoriaFiltrada = data.filter((articulo) => articulo.category === category)
     return (
         <>
-            <h3>{gretting}</h3>
-            <ItemList data = {data}/>
+            <h3 className='gretting'>{gretting}</h3>
+            {category ? <ItemList articulos = {categoriaFiltrada} /> : <ItemList articulos= {data}/>}            
         </>
     )
 }

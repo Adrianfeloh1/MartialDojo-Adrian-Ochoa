@@ -1,27 +1,34 @@
 [
-    {       
-        "id": "Item 1",
-        "nombre": "GUANTES DE BOXEO",
-        "descripcion": "Sit enim voluptate quaerat consequatur soluta.Provident nemo  ducimus totam",
-        "categoria": "Implementos Deportivos",
-        "stock": 10,
-        "precio": 150000
-    },
-    {   
-        "id": "Item 2",
-        "nombre": "SACO DE ARTES MARCIALES",
-        "descripcion": "Sit enim voluptate quaerat consequatur soluta.Provident nemo  ducimus totam",
-        "categoria": "Implementos Deportivos",
-        "stock": 24,
-        "precio": 230000
-
-    },
-    {     
-        "id": "Item 3",   
-        "nombre": "CINTURONES",
-        "descripcion": "Sit enim voluptate quaerat consequatur soluta.Provident nemo  ducimus totam",
-        "categoria": "Implementos Deportivos",
-        "stock": 8,
-        "precio": 45000
-    }
+  {
+    "id": "Item 1",
+    "nombre": "GUANTES DE BOXEO",
+    "descripcion": "Qquaerat consequatur soluta. Provident nemo  ducimus totamSit enim voluptate",
+    "categoria": "Implementos Deportivos",
+    "stock": 10,
+    "precio": 150000
+  },
+  {
+    "id": "Item 2",
+    "nombre": "SACO DE ARTES MARCIALES",
+    "descripcion": "Sit enim voluptate quaerat consequatur soluta.Provident nemo  ducimus totam",
+    "categoria": "Ropa de Entrenamiento",
+    "stock": 24,
+    "precio": 230000
+  },
+  {
+    "id": "Item 3",
+    "nombre": "CINTURONES",
+    "descripcion": "Provident nemo  ducimus totam, Sit enim voluptate quaerat consequatur soluta,Sit enim. ",
+    "categoria": "Accesorios",
+    "stock": 8,
+    "precio": 45000
+  },
+  {
+    "id": "Item 4",
+    "nombre": "UNIFORMES",
+    "descripcion": "Sit enim voluptate quaerat consequatur soluta,Sit enim. tenm, selita, urum ",
+    "categoria": "Ropa de Entrenamiento",
+    "stock": 8,
+    "precio": 185000
+  }
 ]
