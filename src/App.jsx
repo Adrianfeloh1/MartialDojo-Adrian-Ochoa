@@ -10,8 +10,7 @@ import NavBar from './components/NavBar';
 const App = () => {
   return (
     <BrowserRouter>
-      <NavBar />
-            
+      <NavBar />            
 
       <Routes>
         <Route exact path="/" element={<ItemListContainer gretting={"¡Bienvenido a nuestra tienda de artes marciales!"} />} />
