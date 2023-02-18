@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import imagenArticulo from "../assets/guantes.jpg";
+import imagenArticulo from "../assets/saco.jpg";
 
 
 const ItemDetail = ({ articulos }) => {
@@ -13,7 +13,7 @@ const ItemDetail = ({ articulos }) => {
                 <div key={articulo.id} className='container__cards'>
                     <section className='card'>
                         <div className='cover__card'>
-                            <img src={imagenArticulo} alt="GUANTES" />
+                            <img src={imagenArticulo} alt="saco" />
                         </div>
                         <h4>{articulo.nombre}</h4>
                         <hr />

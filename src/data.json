@@ -9,7 +9,7 @@
   },
   {
     "id": "Item 2",
-    "nombre": "SACO DE ARTES MARCIALES",
+    "nombre": "KARATEGUI",
     "descripcion": "Sit enim voluptate quaerat consequatur soluta.Provident nemo  ducimus totam",
     "categoria": "Ropa de Entrenamiento",
     "stock": 24,
@@ -25,10 +25,18 @@
   },
   {
     "id": "Item 4",
-    "nombre": "UNIFORMES",
+    "nombre": "DOBOK",
     "descripcion": "Sit enim voluptate quaerat consequatur soluta,Sit enim. tenm, selita, urum ",
     "categoria": "Ropa de Entrenamiento",
     "stock": 8,
     "precio": 185000
+  },
+  {
+    "id": "Item 5",
+    "nombre": "HAKAMA",
+    "descripcion": "Sit enim voluptate quaerat consequatur soluta,Sit enim. tenm, selita, urum ",
+    "categoria": "Ropa de Entrenamiento",
+    "stock": 8,
+    "precio": 150000
   }
 ]

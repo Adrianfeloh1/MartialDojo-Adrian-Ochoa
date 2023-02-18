@@ -13,7 +13,7 @@ const NavBar = () => {
 
         <ul className='menu-horizontal'>
           <li className='menu-productos'>
-            <Link to={"/category/:id"}>Nuestros Productos</Link>
+            <Link to={"/"}>Nuestros Productos</Link>
           </li>
           <ul className='menu-vertical'>
             <li>

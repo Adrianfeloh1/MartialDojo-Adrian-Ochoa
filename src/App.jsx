@@ -15,7 +15,7 @@ const App = () => {
 
       <Routes>
         <Route exact path="/" element={<ItemListContainer gretting={"¡Bienvenido a nuestra tienda de artes marciales!"} />} />
-        <Route exact path="/category/:id" element={<ItemListContainer gretting={"¡Bienvenido a nuestra tienda de artes marciales!"} />} />
+        <Route exact path="/category/:categoria" element={<ItemListContainer gretting={"¡Bienvenido a nuestra tienda de artes marciales!"} />} />
         <Route exact path="/item/:id" element={<ItemDetailContainer />} />
       </Routes>
     </BrowserRouter>

@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 const ItemListContainer = ({ gretting }) => {
     //console.log(data)) verifico que traiga el json
 
-    const {category} = useParams();
+    const {categoria} = useParams();
 
     const getDatos = () => {
         return new Promise((resolve, reject) => {
@@ -27,11 +27,11 @@ const ItemListContainer = ({ gretting }) => {
     }
     fetchingData();    
 
-    const categoriaFiltrada = data.filter((articulo) => articulo.category === category)
+    const categoriaFiltrada = data.filter((articulo) => articulo.categoria === categoria)
     return (
         <>
             <h3 className='gretting'>{gretting}</h3>
-            {category ? <ItemList articulos = {categoriaFiltrada} /> : <ItemList articulos= {data}/>}            
+            {categoria ? <ItemList articulos = {categoriaFiltrada} /> : <ItemList articulos= {data}/>}            
         </>
     )
 }
