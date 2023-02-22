@@ -1,6 +1,4 @@
 import { useParams } from "react-router-dom";
-import imagenArticulo from "../assets/saco.jpg";
-
 
 const ItemDetail = ({ articulos }) => {
     const { id } = useParams();
@@ -13,7 +11,7 @@ const ItemDetail = ({ articulos }) => {
                 <div key={articulo.id} className='container__cards'>
                     <section className='card'>
                         <div className='cover__card'>
-                            <img src={imagenArticulo} alt="saco" />
+                            <img src={articulo.img} alt="saco" />
                         </div>
                         <h4>{articulo.nombre}</h4>
                         <hr />
