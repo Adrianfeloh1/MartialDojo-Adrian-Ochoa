@@ -15,7 +15,7 @@ const Item = ({ id, nombre, categoria, precio }) => {
                     <h4>{categoria}</h4>
                     <hr />
                     <div className='footer__Card'>
-                        <h4 className='precio'>{precio}</h4>
+                        <h4 className='precio'>$ {precio} COP</h4>
                     </div>
                     <hr />
                     <button className='btn'>

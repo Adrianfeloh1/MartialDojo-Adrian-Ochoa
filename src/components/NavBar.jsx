@@ -1,21 +1,19 @@
-import { Link } from 'react-router-dom';
-import CartWidget from './CartWidget';
+import { Link } from "react-router-dom";
+import CartWidget from "./CartWidget";
 
 const NavBar = () => {
-
   return (
     <>
-      <div className='NavBar'>
-
-        <h1>
+      <div className="NavBar">
+        <h1 className="animate__animated animate__zoomIn">
           <Link to={"/"}>MartialDojo</Link>
         </h1>
 
-        <ul className='menu-horizontal'>
-          <li className='menu-productos'>
+        <ul className="menu-horizontal">
+          <li className="menu-productos">
             <Link to={"/"}>Nuestros Productos</Link>
           </li>
-          <ul className='menu-vertical'>
+          <ul className="menu-vertical">
             <li>
               <Link to={`/category/${"Implementos Deportivos"}`}>
                 Implementos Deportivos
@@ -27,18 +25,16 @@ const NavBar = () => {
               </Link>
             </li>
             <li>
-              <Link to={`/category/${"Accesorios"}`}>
-                Accesorios
-              </Link>
+              <Link to={`/category/${"Accesorios"}`}>Accesorios</Link>
             </li>
           </ul>
         </ul>
-        <CartWidget />
+        <Link to={"/cart"}>
+          <CartWidget />
+        </Link>
       </div>
-
     </>
-
-  )
-}
+  );
+};
 
 export default NavBar;
