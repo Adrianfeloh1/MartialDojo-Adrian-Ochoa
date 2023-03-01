@@ -1,6 +1,6 @@
 [
   {
-    "id": "Item 1",
+    "id": 1,
     "img": "/src/assets/guantes.jpg",
     "nombre": "GUANTES DE BOXEO",
     "descripcion": "Qquaerat consequatur soluta. Provident nemo  ducimus totamSit enim voluptate",
@@ -9,7 +9,7 @@
     "precio": 150000
   },
   {
-    "id": "Item 2",
+    "id": 2,
     "img": "/src/assets/karategui.jpg",
     "nombre": "KARATEGUI",
     "descripcion": "Sit enim voluptate quaerat consequatur soluta.Provident nemo  ducimus totam",
@@ -18,7 +18,7 @@
     "precio": 230000
   },
   {
-    "id": "Item 3",
+    "id": 3,
     "nombre": "CINTURONES",
     "img": "/src/assets/cinturones.jpg",
     "descripcion": "Provident nemo  ducimus totam, Sit enim voluptate quaerat consequatur soluta,Sit enim. ",
@@ -27,7 +27,7 @@
     "precio": 45000
   },
   {
-    "id": "Item 4",
+    "id": 4,
     "img": "/src/assets/dobok.jpg",
     "nombre": "DOBOK",
     "descripcion": "Sit enim voluptate quaerat consequatur soluta,Sit enim. tenm, selita, urum ",
@@ -36,7 +36,7 @@
     "precio": 185000
   },
   {
-    "id": "Item 5",
+    "id": 5,
     "img": "/src/assets/hakama.jpg",
     "nombre": "HAKAMA",
     "descripcion": "Sit enim voluptate quaerat consequatur soluta,Sit enim. tenm, selita, urum ",

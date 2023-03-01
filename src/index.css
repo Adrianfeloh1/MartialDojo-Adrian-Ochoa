@@ -46,7 +46,7 @@ h3 {
   font-size: 1.5em;
   color: #3fa5f8;
   text-align: center;  
-  padding: 1em 0em 0.5em 0em;
+  padding:  0.3em 0em;
 }
 
 .gretting {
@@ -172,8 +172,7 @@ h4 {
   font-size: 1em;
   font-family: "lato";  
   background-color: #131314d0;
-  border: none;
-  border-radius: 0.2em;
+  border: none;  
   padding: 0.5em;
   display: flex; 
   color: #f5f5f7;
@@ -227,11 +226,12 @@ h4 {
   background: none;
   border-bottom: 1px solid #fc9801;  
   outline: 0;
-  color: #f5f5f7;
+  color: #fc9801;
+  font-weight: 700;
 }
 
 .container-contact form button {
-  background-color: #fc9801;
+  background-color: #f5f5f7;
   border: none; 
   text-transform: uppercase;
   font-size: 1.2em;
@@ -240,9 +240,9 @@ h4 {
 
 .container-contact form button:hover,
 .container-contact form button:focus {
-  background-color: #f5f5f7;
+  background-color: #fc9801;
   font-weight: 700;
-  color: #fc9801;
+  color: #f5f5f7;
   transition: background-color 500ms ease-out;  
 }
 
@@ -271,6 +271,30 @@ h4 {
 .more-info {
   font-size: 2em;
   color: #3fa5f8;
+}
+
+/* ----------CONTADOR DEL CARRITO------------ */
+
+.Button-group {
+  display: flex;  
+}
+
+.center button {  
+  padding: 0.5em;
+  background-color: #fc9801af;
+  font-size: 1em;
+  font-family: sans-serif;
+  font-weight: 700;
+  color: #fcfcfc;
+  border: none;
+  cursor: pointer;
+}
+
+.signos {
+  background-color: transparent;
+  color: #f5f5f7;
+  font-size: 2em;    
+  cursor: pointer;
 }
 
 

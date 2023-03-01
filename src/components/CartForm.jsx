@@ -1,7 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const CartForm = () => {
-
   return (
     <>
       <div className="conteiner-form">
@@ -9,7 +9,7 @@ const CartForm = () => {
 
         <div className="container-two-parts">
           <div className="container-contact">
-            <form action="">              
+            <form action="">
               <p>
                 <label htmlFor="nombre">Nombre</label>
                 <input type="text" name="nombre" id="nombre" />
@@ -40,15 +40,23 @@ const CartForm = () => {
             <h3>Más información</h3>
             <ul>
               <li>
-                <span class="more-info material-symbols-outlined">signpost</span>
+                <span class="more-info material-symbols-outlined">
+                  signpost
+                </span>
                 <span> Calle 38A # 52 - 28 Medellín - Colombia</span>
               </li>
               <li>
-                <span class="more-info material-symbols-outlined"> mark_email_read</span>
+                <span class="more-info material-symbols-outlined">
+                  {" "}
+                  mark_email_read
+                </span>
                 <span> martialdojo@gmail.com</span>
               </li>
               <li>
-                <span class="more-info material-symbols-outlined"> support_agent</span>
+                <span class="more-info material-symbols-outlined">
+                  {" "}
+                  support_agent
+                </span>
                 <span> +57 315 775 55 55</span>
               </li>
             </ul>
@@ -59,7 +67,9 @@ const CartForm = () => {
               a ipsa.
             </p>
 
-            <h4>MARTIALDOJO.COM</h4>
+            <h4>
+              <Link to={"/"}>martialdojo.com</Link>
+            </h4>
           </div>
         </div>
       </div>
