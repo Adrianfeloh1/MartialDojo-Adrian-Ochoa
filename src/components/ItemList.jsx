@@ -2,7 +2,8 @@ import React from 'react'
 import Item from './Item'
 
 const ItemList = ({ articulos }) => {
-  
+
+   
   return (
     <>
       <main className='main-catalogue'>
@@ -27,4 +28,4 @@ const ItemList = ({ articulos }) => {
   )
 }
 
-export default ItemList
+export default ItemList;

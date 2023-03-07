@@ -1,9 +1,39 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { CartContext } from "../contexts/ShoppingCartContext";
 
 const CartForm = () => {
+  const [cart, setCart] = useContext(CartContext);
+
+  const deletId = cart.map((item) => {
+    return item.id;
+  });
+
   return (
     <>
+      {cart.map((item) => {
+        return (
+          <div key={item.id} className="container__cards">
+            <section className="card">
+              <div className="cover__card">
+                <img src={item.img} alt="saco" />
+              </div>
+              <h4>{item.nombre}</h4>
+              <div className="footer__Card">
+                <h4 className="precio">$ {item.precio} COP</h4>
+                <h3>Cantidad: {item.quantity}</h3>
+                <button
+                  className="btn"
+                  onClick={() => console.log("eliminando")}
+                >
+                  Borrar
+                </button>
+              </div>
+            </section>
+          </div>
+        );
+      })}
+      ;
       <div className="conteiner-form">
         <h2 className="contactanos"> Contáctanos</h2>
 

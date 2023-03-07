@@ -1,11 +1,19 @@
 import React from "react";
+import { useContext } from "react";
+import { CartContext } from "../contexts/ShoppingCartContext";
 
 const CartWidget = () => {
+  const [cart, setCart] = useContext(CartContext);
+
+  const contador = cart.reduce((acc, curr) => {
+    return acc + curr.quantity;
+  }, 0);
+
   return (
     <>
       <div>
         <span className="icon material-symbols-outlined">shopping_bag</span>
-        <span>4</span>
+        <span className="cart-counter">{contador}</span>
       </div>
     </>
   );

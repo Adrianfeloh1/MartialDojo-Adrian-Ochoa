@@ -3,7 +3,7 @@ import { CartContext } from "../contexts/ShoppingCartContext";
 
 const ItemCount = ({ stock, id, precio, nombre }) => {
   const [cart, setCart] = useContext(CartContext);
-  const [count, setCount] = useState(5);
+  const [count, setCount] = useState(1);
 
   const addQty = () => {
     setCount(count + 1);

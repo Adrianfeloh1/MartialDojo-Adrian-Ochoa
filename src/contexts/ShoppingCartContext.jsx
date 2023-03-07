@@ -11,5 +11,3 @@ export const ShoppingCartProvider = ({ children }) => {
     </CartContext.Provider>
   );
 };
-
-export default ShoppingCartProvider;
