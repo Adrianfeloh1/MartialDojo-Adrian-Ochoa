@@ -1,39 +1,23 @@
-import ItemDetail from './ItemDetail';
-import React, { useState } from 'react'
-import { useParams } from 'react-router-dom';
-import data from '../data.json';
+import ItemDetail from "./ItemDetail";
+import React, { useState, useEffect } from "react";
+import { collection, getDocs, getFirestore } from "firebase/firestore";
 
 
 const ItemDetailContainer = () => {
-    const {id} = useParams ();
-    const [articulos, setArticulos] = useState([]);
-    const getDatos = () => {
-        return new Promise((resolve, reject) => {
-            if (data.length === 0) {
-                reject (new Error("No hay Datos"));
-            }
-
-            setTimeout(() => {
-                const articuloFiltrado = data.filter ((articulo) => articulo.id == id);
-                resolve(articuloFiltrado)
-            }, 2000);
-        });
-    };
-
-    async function fetchingData() {
-        try {
-            const datosFetched = await getDatos();
-            setArticulos(datosFetched);            
-        } catch (error) {
-            console.log(err);
-        };
-    };
-
-    fetchingData();
-
-  return <ItemDetail articulos = {data}/>
-
-
-}
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    const db = getFirestore();
+    const articulosCollection = collection(db, "MartialDojo");
+    getDocs(articulosCollection).then((Snapshot) => {
+      const articulos = Snapshot.docs.map((doc) => ({
+        ...doc.data(),
+        id: doc.id,
+      }));
+      setData(articulos);
+    });
+  }, []);
+  
+  return <ItemDetail articulos={data} />;
+};
 
 export default ItemDetailContainer;

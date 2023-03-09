@@ -45,14 +45,14 @@ h2 {
 h3 {
   font-size: 1.5em;
   color: #3fa5f8;
-  text-align: center;  
-  padding:  0.3em 0em;
+  text-align: center;
+  padding: 0.3em 0em;
 }
 
 .gretting {
   font-size: 1.8em;
   color: #40a7fc;
-  text-align: center; 
+  text-align: center;
 }
 
 h4 {
@@ -67,7 +67,6 @@ h4 {
   padding: 0.5em 0em;
   color: #edeff5f6;
   padding: 2em;
-  
 }
 
 .menu-horizontal {
@@ -82,21 +81,21 @@ h4 {
 }
 
 .menu-horizontal li:hover {
-  background-color: #f5f5f738;  
+  background-color: #f5f5f738;
 }
 
 .menu-vertical {
   position: absolute;
-  display: none;  
+  display: none;
 }
 
 .menu-vertical li {
-  padding: 0.3em; 
+  padding: 0.3em;
 }
 
 .menu-productos {
   position: relative;
-  right: 10.6em;  
+  right: 10.6em;
 }
 
 .menu-horizontal:hover .menu-vertical {
@@ -110,14 +109,14 @@ h4 {
 /* -------CARDS-------- */
 
 .main-catalogue {
-  display: flex;     
+  display: flex;
 }
 
 .container__cards {
   width: 100%;
   margin: auto;
   display: flex;
-  justify-content: space-around;  
+  justify-content: space-around;
   margin-top: 2em;
 }
 
@@ -170,59 +169,57 @@ h4 {
 
 .btn {
   font-size: 1em;
-  font-family: "lato";  
+  font-family: "lato";
   background-color: #131314d0;
-  border: none;  
+  border: none;
   margin-bottom: 0.5em;
-  width: 100%;
-  padding: 0.8em;
-  display: flex; 
+  width: 40%;
+  padding: 0.7em;
+  display: flex;
   color: #f5f5f7;
   font-weight: bold;
   justify-content: center;
 }
 
-.btn :hover{
+.btn :hover {
   color: #fc9801;
 }
 
 /* ----------CARTFORM------------ */
 
-.conteiner-form{
+.conteiner-form {
   max-width: 1170px;
   margin: auto;
   padding: 2em;
-  color: #f5f5f7;  
+  color: #f5f5f7;
 }
 
-.contactanos{
-  color: #fc9801;  
+.contactanos {
+  color: #fc9801;
   margin-bottom: 0.5em;
   margin-left: 5em;
 }
 
-.container-two-parts{
+.container-two-parts {
   -webkit-box-shadow: 11px -12px 3px -1px rgba(250, 250, 250, 0.466);
   -moz-box-shadow: 11px -12px 3px -1px rgba(255, 255, 255, 0.527);
   box-shadow: 11px -12px 3px -1px rgba(255, 255, 255, 0.438);
-  background: #131314ce;   
-  width: 100%;  
+  background: #131314ce;
+  width: 100%;
 }
 
 .container-two-parts > * {
   padding: 1.5em;
-  
 }
 
-.container-two-parts{
+.container-two-parts {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
-.container-contact form p{
-  padding: 0.5em;   
+.container-contact form p {
+  padding: 0.5em;
 }
-
 
 .container-contact form button,
 .container-contact form input,
@@ -231,7 +228,7 @@ h4 {
   padding: 0.8em;
   border: none;
   background: none;
-  border-bottom: 1px solid #fc9801;  
+  border-bottom: 1px solid #fc9801;
   outline: 0;
   color: #fc9801;
   font-weight: 700;
@@ -239,10 +236,10 @@ h4 {
 
 .container-contact form button {
   background-color: #f5f5f7;
-  border: none; 
+  border: none;
   text-transform: uppercase;
   font-size: 1.2em;
-  padding: 1em;  
+  padding: 1em;
 }
 
 .container-contact form button:hover,
@@ -250,7 +247,7 @@ h4 {
   background-color: #fc9801;
   font-weight: 700;
   color: #f5f5f7;
-  transition: background-color 500ms ease-out;  
+  transition: background-color 500ms ease-out;
 }
 
 .container-info h3,
@@ -258,8 +255,8 @@ h4 {
 .container-info ul,
 .container-info li,
 .container-info p,
-.container-info span{
-  text-align: center;  
+.container-info span {
+  text-align: center;
 }
 
 .container-info li {
@@ -270,7 +267,7 @@ h4 {
   padding: 1em;
 }
 
-.container-info h4{
+.container-info h4 {
   font-family: "Shojumaru", cursive;
   margin-bottom: 3em;
 }
@@ -283,28 +280,27 @@ h4 {
 /* ----------CONTADOR DEL CARRITO------------ */
 
 .Button-group {
-  display: flex;  
+  display: flex;
 }
 
-.center button {  
+.center button {
   padding: 0.5em;
-  background-color: #fc9801af;
+  background-color: #fc980188;
   font-size: 1em;
   font-family: sans-serif;
   font-weight: 700;
   color: #fcfcfc;
   border: none;
-  cursor: pointer;
+  cursor: pointer;  
+}
+
+.center button:hover{
+  border: solid 1px;   
 }
 
 .signos {
   background-color: transparent;
   color: #f5f5f7;
-  font-size: 2em;    
+  font-size: 2em;
   cursor: pointer;
 }
-
-
-
-
-

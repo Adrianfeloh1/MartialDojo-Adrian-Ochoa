@@ -1,8 +1,27 @@
 import { useParams } from "react-router-dom";
 import ItemCount from "./ItemCount";
+import { useEffect, useState } from "react";
+import { doc, getDoc, getFirestore } from "firebase/firestore";
 
 const ItemDetail = ({ articulos }) => {
   const { id } = useParams();
+
+  const [producto, setProducto] = useState([]);
+
+  useEffect(() => {
+    const db = getFirestore();
+
+    const articulosRef = doc(db, "MartialDojo", `${id}` );
+
+    getDoc(articulosRef).then((snapshot) => {
+      if (snapshot.exists()) {
+        setProducto(snapshot.data());
+      } else {
+        console.log("No está ese documento!");
+      }
+    });
+
+  },[]);
 
   const articulosFiltrados = articulos.filter((articulo) => articulo.id == id);
 

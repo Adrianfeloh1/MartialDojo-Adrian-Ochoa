@@ -34,25 +34,25 @@ const ItemCount = ({ stock, id, precio, nombre }) => {
     <>
       <div className="Button-group">
         {count < 1 ? (
-          <button class="signos material-symbols-outlined">exposure_neg_1</button>
+          <button className="signos material-symbols-outlined">exposure_neg_1</button>
         ) : (
-          <button onClick={substractQty} class="signos material-symbols-outlined">
+          <button onClick={substractQty} className="signos material-symbols-outlined">
             exposure_neg_1
           </button>
         )}
 
         <div className="center">
           <button onClick={() => addToCart()}>
-            Agregar al carro: {count}
+            Comprar: {count}
           </button>
         </div>
 
         {count < stock ? (
-          <button onClick={addQty} class="signos material-symbols-outlined">
+          <button onClick={addQty} className="signos material-symbols-outlined">
             exposure_plus_1
           </button>
         ) : (
-          <button class="signos material-symbols-outlined">exposure_plus_1</button>
+          <button className="signos material-symbols-outlined">exposure_plus_1</button>
         )}
       </div>
     </>
