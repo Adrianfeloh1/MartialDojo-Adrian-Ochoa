@@ -5,6 +5,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  --animate-duration: 2000ms;
 }
 
 * {
@@ -44,7 +45,7 @@ h2 {
 
 h3 {
   font-size: 1.5em;
-  color: #3fa5f8;
+  color: #40a7fc;
   text-align: center;
   padding: 0.3em 0em;
 }
@@ -103,7 +104,39 @@ h4 {
 }
 
 .icon {
+  font-size: 3em;
+}
+
+.cart-counter {
+  font-size: 1.2em;
+}
+
+.container-icon {
+  display: flex;
+  flex-direction: column;
+}
+
+.iconCart {
+  margin-top: 1em;
+  font-size: 4em;
+  color: #fc9801;
+  text-align: center;
+}
+
+.carrito-vacio {
   font-size: 2.5em;
+}
+
+.volver-tienda {
+  padding: 0.7em;
+  color: #f5f5f7;
+  background-color: #131314ce;
+  font-family: "Shojumaru", cursive;
+  font-size: 2em;
+}
+
+.volver-tienda:hover{
+  border: solid 1px;
 }
 
 /* -------CARDS-------- */
@@ -111,6 +144,8 @@ h4 {
 .main-catalogue {
   display: flex;
 }
+
+
 
 .container__cards {
   width: 100%;
@@ -291,11 +326,11 @@ h4 {
   font-weight: 700;
   color: #fcfcfc;
   border: none;
-  cursor: pointer;  
+  cursor: pointer;
 }
 
-.center button:hover{
-  border: solid 1px;   
+.center button:hover {
+  border: solid 1px;
 }
 
 .signos {

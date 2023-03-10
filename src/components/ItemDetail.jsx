@@ -23,7 +23,7 @@ const ItemDetail = ({ articulos }) => {
 
   },[]);
 
-  const articulosFiltrados = articulos.filter((articulo) => articulo.id == id);
+  const articulosFiltrados = articulos.filter((articulo) => articulo.id === id);
 
   return (
     <>
@@ -33,7 +33,7 @@ const ItemDetail = ({ articulos }) => {
             <div className="cover__card">
               <img src={articulo.img} alt="saco" />
             </div>
-            <h4>{articulo.nombre}</h4>
+            <h3>{articulo.nombre}</h3>
             <hr />
             <p>{articulo.descripcion}</p>
             <hr />
