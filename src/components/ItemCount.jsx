@@ -42,8 +42,8 @@ const ItemCount = ({ stock, id, precio, nombre, img }) => {
         )}
 
         <div className="center">
-          <button onClick={() => addToCart()}>
-            Comprar: {count}
+          <button className="" onClick={() => addToCart()}>
+            AGREGAR AL CARRITO: {count}
           </button>
         </div>
 
