@@ -45,7 +45,6 @@ const ItemDetail = ({ articulos }) => {
                 stock={articulo.stock}
                 precio={articulo.precio}
                 nombre={articulo.nombre}
-                img={articulo.img}
               />
             </div>
           </section>

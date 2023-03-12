@@ -10,10 +10,9 @@ const Item = ({ id, nombre, img, categoria, precio }) => {
                     <div className='cover__card'>
                         <img src={img} alt="" />
                     </div>
-                   
                     <h3 className='titulo-articulo'>{nombre}</h3>
-                    <h4>{categoria}</h4>                   
-                    
+                    <h4>{categoria}</h4>
+                    <hr />
                     <div className='footer__Card'>
                         <h4 className='precio'>$ {precio} COP</h4>
                     </div>
