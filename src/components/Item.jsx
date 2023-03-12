@@ -8,7 +8,7 @@ const Item = ({ id, nombre, img, categoria, precio }) => {
             <div key={id} className='container__cards'>
                 <section className='card'>
                     <div className='cover__card'>
-                        <img src={img} alt="" />
+                        <img src={img} alt="imagen" />
                     </div>
                     <h3 className='titulo-articulo'>{nombre}</h3>
                     <h4>{categoria}</h4>

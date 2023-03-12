@@ -6,12 +6,21 @@ import { Link } from "react-router-dom";
 const CartForm = () => {
   const [cart, setCart] = useContext(CartContext);
 
-  //Rendering condicional para el fomulario
-  const mostrarComponente = true;
-
   //Función eliminando el producto
   const eliminarProducto = (id) => {
     setCart(cart.filter((item) => item.id !== id));
+  };
+
+  const calcularProducto = (item)=> {
+    return item.precio * item.quantity
+  }
+
+  const calcularTotal = () => {
+    let total = 0;
+    cart.forEach((item) => {
+      total = total + item.precio * item.quantity
+    })
+    return total;
   };
 
   return (
@@ -27,7 +36,8 @@ const CartForm = () => {
                 <h3>{item.nombre}</h3>
                 <div className="footer__Card">
                   <h4 className="precio">$ {item.precio} COP</h4>
-                  <h3>Cantidad: {item.quantity}</h3>
+                  <h3 className="cantidad">Cantidad: {item.quantity}</h3>
+                  <h3 className="precio-cantidad">Total: ${calcularProducto(item)}</h3>
                   <button
                     className="btn"
                     onClick={() => eliminarProducto(item.id)}
@@ -36,11 +46,14 @@ const CartForm = () => {
                   </button>
                 </div>
               </section>
-            </div>
-          );
+            </div>                      
+          );     
         })}
-        ;
+        ;       
       </div>
+
+      <h3 className="total-compra">TOTAL DE LA COMPRA: ${calcularTotal()}</h3>
+      <hr />
 
       {cart.length > 0 ? (
         <SendOrder />
