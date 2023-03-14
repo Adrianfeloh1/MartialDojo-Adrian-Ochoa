@@ -5,27 +5,30 @@ const ItemCount = ({ stock, id, precio, nombre, img }) => {
   const [cart, setCart] = useContext(CartContext);
   const [count, setCount] = useState(1);
 
-  const addQty = () => {
+  //Función para sumar 1 a la card
+  const sumar = () => {
     setCount(count + 1);
   };
 
-  const substractQty = () => {
+  //Función para restar 1 a la card
+  const restar = () => {
     setCount(count - 1);
   };
 
-  const addToCart = () => {
-    setCart((currItems) => {
-      const isItemFound = currItems.find((item) => item.id === id);
-      if (isItemFound) {
-        return currItems.map((item) => {
+  //Función para agregar al Carrito
+  const agregarAlCarrrito = () => {
+    setCart((itemsCargados) => {
+      const itemEncontrado = itemsCargados.find((item) => item.id === id);
+      if (itemEncontrado) {
+        return itemsCargados.map((item) => {
           if (item.id === id) {
-            return { ...item, quantity: item.quantity + count };
+            return { ...item, cantidad: item.cantidad + count };
           } else {
             return item;
           }
         });
       } else {
-        return [...currItems, { id, quantity: count, precio, nombre, img }];
+        return [...itemsCargados, { id, cantidad: count, precio, nombre, img }];
       }
     });
   };
@@ -36,19 +39,19 @@ const ItemCount = ({ stock, id, precio, nombre, img }) => {
         {count < 1 ? (
           <button className="signos material-symbols-outlined">exposure_neg_1</button>
         ) : (
-          <button onClick={substractQty} className="signos material-symbols-outlined">
+          <button onClick={restar} className="signos material-symbols-outlined">
             exposure_neg_1
           </button>
         )}
 
         <div className="center">
-          <button className="" onClick={() => addToCart()}>
+          <button className="" onClick={() => agregarAlCarrrito()}>
             AGREGAR AL CARRITO: {count}
           </button>
         </div>
 
         {count < stock ? (
-          <button onClick={addQty} className="signos material-symbols-outlined">
+          <button onClick={sumar} className="signos material-symbols-outlined">
             exposure_plus_1
           </button>
         ) : (

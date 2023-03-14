@@ -11,14 +11,16 @@ const CartForm = () => {
     setCart(cart.filter((item) => item.id !== id));
   };
 
+  //Función calcular producto cantidad x precio
   const calcularProducto = (item)=> {
-    return item.precio * item.quantity
+    return item.precio * item.cantidad
   }
 
+  //Función calcular el total de la suma de los artículos del carrito
   const calcularTotal = () => {
     let total = 0;
     cart.forEach((item) => {
-      total = total + item.precio * item.quantity
+      total = total + item.precio * item.cantidad
     })
     return total;
   };
@@ -36,7 +38,7 @@ const CartForm = () => {
                 <h3>{item.nombre}</h3>
                 <div className="footer__Card">
                   <h4 className="precio">$ {item.precio} COP</h4>
-                  <h3 className="cantidad">Cantidad: {item.quantity}</h3>
+                  <h3 className="cantidad">Cantidad: {item.cantidad}</h3>
                   <h3 className="precio-cantidad">Total: ${calcularProducto(item)}</h3>
                   <button
                     className="btn"
@@ -60,7 +62,7 @@ const CartForm = () => {
       ) : (
         <>
           <div className="container-icon">
-            <span class="iconCart material-symbols-outlined">
+            <span className="iconCart material-symbols-outlined">
               remove_shopping_cart
             </span>
             <h3 className="carrito-vacio ">Tu carrito está vacío</h3>

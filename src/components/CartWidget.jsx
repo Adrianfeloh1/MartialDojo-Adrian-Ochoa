@@ -6,13 +6,13 @@ const CartWidget = () => {
   const [cart, setCart] = useContext(CartContext);
 
   const contador = cart.reduce((acc, curr) => {
-    return acc + curr.quantity;
+    return acc + curr.cantidad;
   }, 0);
 
   return (
     <>
       <div>
-        <span class=" icon material-symbols-outlined">shopping_cart</span>
+        <span className=" icon material-symbols-outlined">shopping_cart</span>
         <span className="cart-counter">{contador}</span>
       </div>
     </>
