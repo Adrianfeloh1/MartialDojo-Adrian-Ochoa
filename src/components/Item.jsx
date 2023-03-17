@@ -12,11 +12,10 @@ const Item = ({ id, nombre, img, categoria, precio }) => {
                     </div>
                     <h3 className='titulo-articulo'>{nombre}</h3>
                     <h4>{categoria}</h4>
-                    <hr />
+                    
                     <div className='footer__Card'>
                         <h4 className='precio'>$ {precio} COP</h4>
-                    </div>
-                    <hr />
+                    </div>                    
                     <button className='btn'>
                         <Link to={`/item/${id}`}>Detalle</Link>
                     </button>

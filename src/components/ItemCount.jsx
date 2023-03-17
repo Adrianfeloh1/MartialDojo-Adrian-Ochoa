@@ -28,7 +28,7 @@ const ItemCount = ({ stock, id, precio, nombre, img }) => {
           }
         });
       } else {
-        return [...itemsCargados, { id, cantidad: count, precio, nombre, img }];
+        return [...itemsCargados, { id, cantidad: count, precio, nombre, img, stock }];
       }
     });
   };
@@ -55,7 +55,8 @@ const ItemCount = ({ stock, id, precio, nombre, img }) => {
             exposure_plus_1
           </button>
         ) : (
-          <button className="signos material-symbols-outlined">exposure_plus_1</button>
+          <button className="signos material-symbols-outlined">exposure_plus_1</button> 
+          
         )}
       </div>
     </>

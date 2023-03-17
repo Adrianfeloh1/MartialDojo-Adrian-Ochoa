@@ -31,7 +31,7 @@ const ItemDetail = ({ articulos }) => {
         <div key={articulo.id} className="container__cards-detail">
           <section className="card-detail">
             <div className="cover__card-detail">
-              <img src={articulo.img} alt="saco" />
+              <img src={articulo.img} alt="imagen artículos" />
             </div>
             <h3>{articulo.nombre}</h3>
             <hr />

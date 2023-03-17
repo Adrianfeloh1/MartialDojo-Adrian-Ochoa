@@ -4,6 +4,7 @@ import Item from './Item'
 const ItemList = ({ articulos }) => {
 
    
+  
   return (
     <>
       <main className='main-catalogue'>

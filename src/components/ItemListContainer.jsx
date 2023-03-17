@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useState, useEffect } from "react";
 import { collection, getDocs, getFirestore } from "firebase/firestore";
 
+
 const ItemListContainer = ({ gretting }) => {
     
     const [articulos, setArticulos] = useState([]);

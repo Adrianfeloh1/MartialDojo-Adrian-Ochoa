@@ -6,22 +6,21 @@ import { Link } from "react-router-dom";
 const CartForm = () => {
   const [cart, setCart] = useContext(CartContext);
 
-  //Función eliminando el producto
   const eliminarProducto = (id) => {
     setCart(cart.filter((item) => item.id !== id));
   };
 
   //Función calcular producto cantidad x precio
-  const calcularProducto = (item)=> {
-    return item.precio * item.cantidad
-  }
+  const calcularProducto = (item) => {
+    return item.precio * item.cantidad;
+  };
 
   //Función calcular el total de la suma de los artículos del carrito
   const calcularTotal = () => {
     let total = 0;
     cart.forEach((item) => {
-      total = total + item.precio * item.cantidad
-    })
+      total = total + item.precio * item.cantidad;
+    });
     return total;
   };
 
@@ -39,7 +38,9 @@ const CartForm = () => {
                 <div className="footer__Card">
                   <h4 className="precio">$ {item.precio} COP</h4>
                   <h3 className="cantidad">Cantidad: {item.cantidad}</h3>
-                  <h3 className="precio-cantidad">Total: ${calcularProducto(item)}</h3>
+                  <h3 className="precio-cantidad">
+                    Total: ${calcularProducto(item)}
+                  </h3>
                   <button
                     className="btn"
                     onClick={() => eliminarProducto(item.id)}
@@ -48,14 +49,19 @@ const CartForm = () => {
                   </button>
                 </div>
               </section>
-            </div>                      
-          );     
+            </div>
+          );
         })}
-        ;       
+        ;
       </div>
 
-      <h3 className="total-compra">TOTAL DE LA COMPRA: ${calcularTotal()}</h3>
+      <h3 className="total-compra">Total a pagar: ${calcularTotal()}</h3>
+      <button className="btn-2">
+        <Link to={"/"}>Continuar</Link>
+        
+      </button>
       <hr />
+      
 
       {cart.length > 0 ? (
         <SendOrder />
@@ -66,7 +72,7 @@ const CartForm = () => {
               remove_shopping_cart
             </span>
             <h3 className="carrito-vacio ">Tu carrito está vacío</h3>
-            <button className="volver-tienda animate__animated animate__fadeInUp" >
+            <button className="volver-tienda animate__animated animate__fadeInUp">
               <Link to={"/"}>Volver a la tienda</Link>
             </button>
           </div>
