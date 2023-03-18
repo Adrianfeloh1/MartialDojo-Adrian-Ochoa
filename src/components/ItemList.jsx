@@ -1,10 +1,11 @@
 import React from 'react'
 import Item from './Item'
+import {memo} from 'react';
 
-const ItemList = ({ articulos }) => {
 
-   
-  
+const ItemList = memo(({ articulos }) => {   
+  //
+  console.log("renderizando los artículos");
   return (
     <>
       <main className='main-catalogue'>
@@ -22,11 +23,8 @@ const ItemList = ({ articulos }) => {
         ))}
 
       </main>
-
-
     </>
-
   )
-}
+})
 
 export default ItemList;

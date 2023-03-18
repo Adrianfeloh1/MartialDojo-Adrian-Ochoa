@@ -59,9 +59,7 @@ const CartForm = () => {
       <button className="btn-2">
         <Link to={"/"}>Continuar</Link>
         
-      </button>
-      <hr />
-      
+      </button>         
 
       {cart.length > 0 ? (
         <SendOrder />

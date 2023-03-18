@@ -4,6 +4,7 @@ import { CartContext } from "../contexts/ShoppingCartContext";
 const ItemCount = ({ stock, id, precio, nombre, img }) => {
   const [cart, setCart] = useContext(CartContext);
   const [count, setCount] = useState(1);
+  const [errorMessageStock, setErrorMessageStock] = useState("");
 
   //Función para sumar 1 a la card
   const sumar = () => {
@@ -17,6 +18,12 @@ const ItemCount = ({ stock, id, precio, nombre, img }) => {
 
   //Función para agregar al Carrito
   const agregarAlCarrrito = () => {
+    const cantidadTotal = (cart.find((item) => item.id === id)?.cantidad || 0) + count;
+    if (cantidadTotal > stock) {
+      setErrorMessageStock("¡Lo sentimos, nuestro stock se ha agotado!");
+      return;
+    }
+
     setCart((itemsCargados) => {
       const itemEncontrado = itemsCargados.find((item) => item.id === id);
       if (itemEncontrado) {
@@ -28,16 +35,23 @@ const ItemCount = ({ stock, id, precio, nombre, img }) => {
           }
         });
       } else {
-        return [...itemsCargados, { id, cantidad: count, precio, nombre, img, stock }];
+        return [
+          ...itemsCargados,
+          { id, cantidad: count, precio, nombre, img, stock },
+        ];
       }
     });
+
+    setErrorMessageStock("");
   };
 
   return (
     <>
       <div className="Button-group">
         {count < 1 ? (
-          <button className="signos material-symbols-outlined">exposure_neg_1</button>
+          <button className="signos material-symbols-outlined">
+            exposure_neg_1
+          </button>
         ) : (
           <button onClick={restar} className="signos material-symbols-outlined">
             exposure_neg_1
@@ -55,10 +69,13 @@ const ItemCount = ({ stock, id, precio, nombre, img }) => {
             exposure_plus_1
           </button>
         ) : (
-          <button className="signos material-symbols-outlined">exposure_plus_1</button> 
-          
+          <button className="signos material-symbols-outlined">
+            exposure_plus_1
+          </button>
         )}
       </div>
+
+      <h3 className="error-message">{errorMessageStock}</h3>
     </>
   );
 };

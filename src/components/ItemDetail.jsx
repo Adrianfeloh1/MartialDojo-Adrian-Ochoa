@@ -27,6 +27,9 @@ const ItemDetail = ({ articulos }) => {
 
   return (
     <>
+      <button className="volver-tienda animate__animated animate__fadeInUp">
+        <Link to={"/"}>Volver a la tienda</Link>
+      </button>
       {articulosFiltrados.map((articulo) => (
         <div key={articulo.id} className="container__cards-detail">
           <section className="card-detail">
@@ -51,10 +54,6 @@ const ItemDetail = ({ articulos }) => {
           </section>
         </div>
       ))}
-
-      <button className="volver-tienda animate__animated animate__fadeInUp">
-        <Link to={"/"}>Volver a la tienda</Link>
-      </button>
     </>
   );
 };

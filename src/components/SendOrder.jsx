@@ -7,7 +7,8 @@ const SendOrder = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [tel, setTel] = useState([]);
-  const [message, setMessage] = useState("");  
+  const [message, setMessage] = useState(""); 
+  const [errorMessage, setErrorMessage] = useState(""); 
 
   const db = getFirestore();
 
@@ -15,11 +16,11 @@ const SendOrder = () => {
     e.preventDefault();
     
     if (!nombre || !email) {
-      alert("Por favor complete todos los campos");
+      setErrorMessage("Por favor complete los campos Nombre e E-mail");
       return;
     }
 
-    alert("Formulario enviado");
+    setErrorMessage("Formulario enviado");
 
     addDoc(ordersCollection, order).then(({ id }) => serOrderId(id));
   };
@@ -40,7 +41,7 @@ const SendOrder = () => {
 
         <div className="container-two-parts">
           <div className="container-contact">
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}>              
               <p>
                 <label htmlFor="nombre">Nombre</label>
                 <input
@@ -81,6 +82,7 @@ const SendOrder = () => {
               <p className="btn-message">
                 <button type="submit">Enviar</button>
               </p>
+              <h3>{errorMessage}</h3>
             </form>
           </div>
           <div className="container-info">

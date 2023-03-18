@@ -128,17 +128,26 @@ h4 {
 }
 
 .volver-tienda {
-  padding: 0.7em;
-  color: #f5f5f7;
+  padding: 0.5em;  
   background-color: #131314ce;
   font-family: "Shojumaru", cursive;
   font-size: 2em;
   display: flex;
   margin-top: 0.5em;
+  border: none;
 }
 
-.volver-tienda:hover {
-  border: solid 1px;
+.volver-tienda a{
+  color: #f5f5f7;
+}
+
+.volver-tienda a:hover{
+  color: #131314ce;
+}
+
+.volver-tienda:hover { 
+  background-color: #f5f5f7;  
+  transition: background-color 500ms ease-out;  
 }
 
 /* -------CARDS-------- */
@@ -175,13 +184,14 @@ h4 {
 }
 
 .card-detail {
-  width: 35em;
+  width: 28em;
   margin: 0.1em;
   padding: 0.8em;
   -webkit-box-shadow: 11px -12px 3px -1px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 11px -12px 3px -1px rgba(0, 0, 0, 0.75);
   box-shadow: 11px -12px 3px -1px rgba(0, 0, 0, 0.75);
   background: #f5f5f738;
+  margin-top: -1em;
 }
 
 .cover__card {
@@ -192,7 +202,7 @@ h4 {
 
 .cover__card-detail {
   width: 100%;
-  height: 28em;
+  height: 18em;
   overflow: hidden;
 }
 
@@ -214,13 +224,13 @@ h4 {
 }
 
 .card-detail h4 {
-  text-align: center;
-  color: #f5f5f7;
+  text-align: center;  
 }
 
 .card-detail p {
   text-align: center;
   color: #f5f5f7;
+  font-size: 1.1em;
 }
 
 .precio-detail {
@@ -266,20 +276,19 @@ h4 {
 
 .btn-2 {
   font-size: 1.2em;  
-  background-color: #40a7fc;
+  background-color: #fc9801;
   font-family: "lato";  
   margin-bottom: 0.5em;
   width: 20%;  
   display: flex;  
   border: none;
   text-transform: uppercase; 
-  padding: 1em;
-  
+  padding: 1em;  
 }
 
 .btn-2:hover,
 .btn-2:focus {
-  background-color: #fc9801;
+  background-color: #156aaf;
   font-weight: 700;  
   transition: background-color 500ms ease-out;
 }
@@ -298,6 +307,11 @@ h4 {
   font-size: 2.2em;
   color: #f5f5f7;
   padding: 1em 0 0 0;
+}
+
+.error-message{
+  font-size: 1.4em;
+  color: #ff3c00;
 }
 
 /* ----------CARTFORM------------ */
@@ -345,12 +359,12 @@ h4 {
   background: none;
   border-bottom: 1px solid #fc9801;
   outline: 0;
-  color: #fc9801;
+  color: #f5f5f7;
   font-weight: 700;
 }
 
 .container-contact form button {
-  background-color: #f5f5f7;
+  background-color: #fc9801;
   border: none;
   text-transform: uppercase;
   font-size: 1.2em;
@@ -359,7 +373,7 @@ h4 {
 
 .container-contact form button:hover,
 .container-contact form button:focus {
-  background-color: #fc9801;
+  background-color: #156aaf;
   font-weight: 700;
   color: #f5f5f7;
   transition: background-color 500ms ease-out;
