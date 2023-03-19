@@ -35,7 +35,7 @@ const SendOrder = () => {
   const ordersCollection = collection(db, "SendOrder");
 
   return (
-    <>
+    <>    
       <div className="conteiner-form">
         <h2 className="contactanos"> Contáctanos</h2>
 
@@ -125,7 +125,7 @@ const SendOrder = () => {
 
             <h3>Id de la petición: {orderId}</h3>
           </div>
-        </div>
+        </div>        
       </div>
     </>
   );

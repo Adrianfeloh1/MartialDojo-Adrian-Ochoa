@@ -3,6 +3,8 @@ import { CartContext } from "../contexts/ShoppingCartContext";
 import SendOrder from "./SendOrder";
 import { Link } from "react-router-dom";
 
+
+
 const CartForm = () => {
   const [cart, setCart] = useContext(CartContext);
 
@@ -25,7 +27,7 @@ const CartForm = () => {
   };
 
   return (
-    <>
+    <>    
       <div className="main-catalogue">
         {cart.map((item) => {
           return (
@@ -57,8 +59,7 @@ const CartForm = () => {
 
       <h3 className="total-compra">Total a pagar: ${calcularTotal()}</h3>
       <button className="btn-2">
-        <Link to={"/"}>Continuar</Link>
-        
+        <Link to={"/"}>Continuar</Link>        
       </button>         
 
       {cart.length > 0 ? (
@@ -75,8 +76,9 @@ const CartForm = () => {
             </button>
           </div>
         </>
-      )}
+      )}      
     </>
+    
   );
 };
 
