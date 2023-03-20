@@ -150,32 +150,35 @@ h4 {
   transition: background-color 500ms ease-out;
 }
 
-.footer {   
+.redes {
+  padding: 0.8em;
+  cursor: pointer;
+}
+
+.footer {
   width: 100%;
-  text-align: center;  
+  text-align: center;
   color: #f5f5f7;
   margin-top: 1em;
   display: flex;
   flex-direction: column;
 }
 
-.redes{
-  padding: 0.8em;
-  cursor: pointer;
+.footer p {
+  margin-bottom: 1em;
 }
 
 /* -------CARDS-------- */
 
 .main-catalogue {
-  display: flex;
-  flex-direction: row;
+  display: flex;  
+  flex-wrap: wrap;   
 }
 
 .container__cards {
-  width: 100%;
-  margin: auto;
+  width: 20%;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   margin-top: 2em;
 }
 
@@ -188,7 +191,7 @@ h4 {
 }
 
 .card {
-  width: 16em;
+  width: 17em;
   margin: 0.1em;
   padding: 0.8em;
   -webkit-box-shadow: 11px -12px 3px -1px rgba(0, 0, 0, 0.75);
@@ -210,7 +213,7 @@ h4 {
 
 .cover__card {
   width: 100%;
-  height: 10em;
+  height: 12em;
   overflow: hidden;
 }
 
@@ -273,8 +276,7 @@ h4 {
   font-size: 1em;
   font-family: "lato";
   background-color: #131314d0;
-  border: none;
-  margin-bottom: 0.5em;
+  border: none; 
   width: 40%;
   padding: 0.7em;
   display: flex;
@@ -334,7 +336,7 @@ h4 {
   max-width: 1170px;
   margin: auto;
   padding: 2em;
-  color: #f5f5f7;  
+  color: #f5f5f7;
 }
 
 .contactanos {

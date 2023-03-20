@@ -5,8 +5,7 @@ const Footer = () => {
 
   return (
     <>
-      <footer className="footer">
-        <h3>Siguenos</h3>
+      <footer className="footer">        
         <div className="redes">
           <span className="redes">
             <a target={"_blank"} href="https://www.facebook.com/">

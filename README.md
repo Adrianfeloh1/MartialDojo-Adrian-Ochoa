@@ -2,9 +2,9 @@
 
 ### Aplicación E-commerce de implementos deportivos, ropa para entrenamiento y accesorios de artes marciales. Los productos se muestran por nombre, categoría, precio y detalle. 
 
-### Al ingresar al detalle se accede a la descripción ampliada del producto y su cantidad a adquirir, la cual se mostrará en el carro de compras.
+### Al ingresar al detalle, se accede a la descripción ampliada del producto y su cantidad a adquirir, la cual se mostrará en el carro de compras.
 
-### Al ingresar al carro de compras podemos ver los productos agregados con un resumen del valor de la compra en cada producto, así como un total acumulado por los productos elegidos y un formulario para contactar o solicitar contacto al cliente.
+### Al ingresar al carro de compras podemos ver los productos agregados con un resumen del valor de la compra en cada producto, así como un total acumulado por los productos elegidos y un formulario para el cliente.
 
 ### La aplicación maneja base de datos no relacional de prueba en FIREBASE, que contiene el nombre, categoría, descripción, precio, stock y una imagen copiada desde una url.
 

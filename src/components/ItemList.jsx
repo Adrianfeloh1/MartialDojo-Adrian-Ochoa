@@ -1,16 +1,15 @@
-import React from 'react'
-import Item from './Item'
-import {memo} from 'react';
+import React from "react";
+import Item from "./Item";
+import { memo } from "react";
 
-
-const ItemList = memo(({ articulos }) => {   
+const ItemList = memo(({ articulos }) => {
   //
   console.log("renderizando los artículos");
   return (
     <>
-      <main className='main-catalogue'>
+      <main className="main-catalogue">
         {articulos.map((articulo) => (
-          <Item 
+          <Item
             key={articulo.id}
             id={articulo.id}
             nombre={articulo.nombre}
@@ -18,13 +17,12 @@ const ItemList = memo(({ articulos }) => {
             descripcion={articulo.descripcion}
             categoria={articulo.categoria}
             precio={articulo.precio}
-            stock={articulo.stock}            
+            stock={articulo.stock}
           />
         ))}
-
       </main>
     </>
-  )
-})
+  );
+});
 
 export default ItemList;
