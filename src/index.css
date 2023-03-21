@@ -171,8 +171,8 @@ h4 {
 /* -------CARDS-------- */
 
 .main-catalogue {
-  display: flex;  
-  flex-wrap: wrap;   
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .container__cards {
@@ -276,7 +276,7 @@ h4 {
   font-size: 1em;
   font-family: "lato";
   background-color: #131314d0;
-  border: none; 
+  border: none;
   width: 40%;
   padding: 0.7em;
   display: flex;

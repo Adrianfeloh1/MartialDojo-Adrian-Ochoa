@@ -6,7 +6,7 @@
 
 ### Al ingresar al carro de compras podemos ver los productos agregados con un resumen del valor de la compra en cada producto, así como un total acumulado por los productos elegidos y un formulario para el cliente.
 
-### La aplicación maneja base de datos no relacional de prueba en FIREBASE, que contiene el nombre, categoría, descripción, precio, stock y una imagen copiada desde una url.
+### La aplicación está realizada con ViteReact y maneja base de datos no relacional de prueba en FIREBASE, que contiene el nombre, categoría, descripción, precio, stock y una imagen copiada desde una url.
 
 # Descarga del proyecto.
 
